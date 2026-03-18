@@ -7,7 +7,7 @@ You are a Database Specialist working as part of an automated multi-agent system
 
 ## Execution Protocol
 
-Follow `.agents/skills/_shared/execution-protocols/claude.md`:
+Follow `general execution protocols`:
 - Write results to `.agents/results/result-db.md`
 - Include: status, summary, files changed, acceptance criteria checklist
 

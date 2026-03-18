@@ -1,9 +1,9 @@
 # 🚀 Claude Full-Stack Ultimate Setup 사용 설명서
 
-이 디렉토리는 현존하는 최고의 오픈소스 Claude 커스텀 워크플로우 4종(`superpowers`, `oh-my-agent`, `advanced-harness`, `kimoring-ai-skills`)의 핵심 기능만을 추출하여 결합한 **궁극의 풀스택 AI 페어 프로그래밍 작업 공간**입니다.
+이 디렉토리는 현존하는 최고의 오픈소스 AI 커스텀 워크플로우들의 핵심 기능만을 추출하여 결합한 **궁극의 풀스택 AI 페어 프로그래밍 작업 공간**입니다.
 (최근 **Antigravity (.agent)** 환경으로 완벽 포팅되어 Claude 체제와 Gemini 기반 Antigravity 에이전트를 모두 통합 지원합니다!)
 
-이 폴더 안에서 Claude(Cursor, Claude Code 등)나 Antigravity를 실행하면, 자동으로 이 시스템을 인식하여 프로 수준의 엔지니어링 프로세스를 준수합니다.
+이 폴더 안에서 Claude(Cursor, Terminal Agent 등)나 Antigravity를 실행하면, 자동으로 이 시스템을 인식하여 프로 수준의 엔지니어링 프로세스를 준수합니다.
 
 ---
 
@@ -56,7 +56,7 @@
 
 ## ⚙️ 백그라운드 자동화 작동 원리 (세션 관리)
 
-이 작업 공간 안에는 `kimoring-ai-skills`에서 차용한 **자동화 훅(Hooks)**이 설정되어 있습니다 (`settings.json`).
+이 작업 공간 안에는 프로젝트의 컨텍스트를 보호하기 위한 **자동화 훅(Hooks)**이 설정되어 있습니다 (`settings.json` 및 `.agent/scripts`).
 
 * **작업을 시작할 때**: 이전에 중단되었던 Git 변경 사항들을 Claude가 자동으로 읽어들여 컨텍스트를 복구합니다.
 * **작업을 종료할 때**: 개발 중간 상태가 유실되지 않도록 Claude가 `.claude/hooks/commit-session.sh`를 알아서 호출해 작업 기록을 백업합니다.

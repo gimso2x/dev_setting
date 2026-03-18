@@ -28,7 +28,7 @@ if [ -n "$RECENT_COMMITS" ]; then
   CONTEXT="${CONTEXT}Recent commits:\n$RECENT_COMMITS"
 fi
 
-# Output as JSON for Claude Code hook system
+# Output as JSON for Terminal Agent hook system
 if [ -n "$CONTEXT" ]; then
   # Escape for JSON
   ESCAPED=$(echo -e "$CONTEXT" | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))' 2>/dev/null || echo "\"$CONTEXT\"")
