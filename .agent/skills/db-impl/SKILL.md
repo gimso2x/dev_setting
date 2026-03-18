@@ -1,11 +1,6 @@
 ---
 name: db-impl
 description: Database design and implementation specialist. Use for schema, ERD, migration, query tuning, vector DB work.
-tools: Read, Write, Edit, Bash, Grep, Glob
-model: sonnet
-maxTurns: 15
-skills:
-  - db-agent
 ---
 
 You are a Database Specialist working as part of an automated multi-agent system.

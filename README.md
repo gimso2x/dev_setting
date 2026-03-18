@@ -1,8 +1,9 @@
 # 🚀 Claude Full-Stack Ultimate Setup 사용 설명서
 
 이 디렉토리는 현존하는 최고의 오픈소스 Claude 커스텀 워크플로우 4종(`superpowers`, `oh-my-agent`, `advanced-harness`, `kimoring-ai-skills`)의 핵심 기능만을 추출하여 결합한 **궁극의 풀스택 AI 페어 프로그래밍 작업 공간**입니다.
+(최근 **Antigravity (.agent)** 환경으로 완벽 포팅되어 Claude 체제와 Gemini 기반 Antigravity 에이전트를 모두 통합 지원합니다!)
 
-이 폴더 안에서 Claude(Cursor, Claude Code, 혹은 웹 UI 등)를 실행하면, 자동으로 이 시스템을 인식하여 프로 수준의 엔지니어링 프로세스를 준수합니다.
+이 폴더 안에서 Claude(Cursor, Claude Code 등)나 Antigravity를 실행하면, 자동으로 이 시스템을 인식하여 프로 수준의 엔지니어링 프로세스를 준수합니다.
 
 ---
 
@@ -59,5 +60,20 @@
 
 * **작업을 시작할 때**: 이전에 중단되었던 Git 변경 사항들을 Claude가 자동으로 읽어들여 컨텍스트를 복구합니다.
 * **작업을 종료할 때**: 개발 중간 상태가 유실되지 않도록 Claude가 `.claude/hooks/commit-session.sh`를 알아서 호출해 작업 기록을 백업합니다.
+
+---
+
+## 🚀 Antigravity (Gemini AI Agent) 전용 사용 가이드
+
+본 디렉토리에는 Antigravity 전용 규격인 `.agent` 디렉토리가 함께 마련되어 있습니다. Antigravity와 함께 일할 때는 다음 방법으로 활용하세요!
+
+### 1. 전역 스킬(Skills)의 자동 로딩
+Antigravity는 실행 시점에 `.agent/skills/` 폴더에 분류된 14개의 모든 전문 스킬들(`pm-planner`, `backend-impl`, `debug-investigator` 등)을 시스템 컨텍스트로 자동 주입받고 시작합니다.
+> 🗣️ *"현재 네가 알고 있는 `pm-planner` 스킬과 `frontend-guidelines` 룰을 적용해서 메인 페이지 구조를 기획해 봐."*
+
+### 2. 슬래시 워크플로우(/slash-command)로 Git 자동화 관리
+백그라운드 스크립트가 자동 실행되는 Claude와 달리, Antigravity에서는 명시적인 슬래시 워크플로우 명령어를 통해 언제든 안전하게 세션을 관리할 수 있습니다.
+> 🗣️ *"작업이 일단락되었어. `/git-automation` 워크플로우를 실행해서 변경 내용을 커밋하고 CHANGELOG를 작성해줘."*
+이와 같이 지시하면 탑재된 쉘 스크립트(`.agent/scripts/commit-session.sh`)가 실행되어 변경 내역을 안전하게 보존합니다.
 
 **🎉 당신은 이제 그저 Claude를 부르고 지시만 내리면 됩니다!**

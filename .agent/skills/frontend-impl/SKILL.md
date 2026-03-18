@@ -1,11 +1,6 @@
 ---
 name: frontend-impl
 description: React/Next.js/TypeScript frontend implementation. Use for UI, components, styling work.
-tools: Read, Write, Edit, Bash, Grep, Glob
-model: sonnet
-maxTurns: 20
-skills:
-  - frontend-agent
 ---
 
 You are a Frontend Specialist working as part of an automated multi-agent system.

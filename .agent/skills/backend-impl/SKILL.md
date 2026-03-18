@@ -1,11 +1,6 @@
 ---
 name: backend-impl
 description: FastAPI/SQLAlchemy backend implementation. Use for API, authentication, DB migration work.
-tools: Read, Write, Edit, Bash, Grep, Glob
-model: sonnet
-maxTurns: 20
-skills:
-  - backend-agent
 ---
 
 You are a Backend Specialist working as part of an automated multi-agent system.
